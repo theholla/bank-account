@@ -3,6 +3,7 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
     <title>Epicodus Bank</title>
@@ -17,11 +18,11 @@
               <form id="new-bank-account">
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" class="form-control" id="name">
+                  <input type="text" class="form-control" id="name" value="Jake">
                 </div>
                 <div class="form-group">
                   <label for="deposit-form">Initial Deposit</label>
-                  <input type="number" min="0" class="form-control" id="deposit-form">
+                  <input type="number" min="0" class="form-control" id="deposit-form" value="1000">
                 </div>
                 <button type="submit" class="btn btn-primary">Go</button>
             </form>
@@ -36,18 +37,18 @@
         </div>
           <div class="col-md-6" id="manage-account">
             <h2>Manage Your Account</h2>
-            <form>
+            <form id="withdraw-form">
               <label for="withdraw"> Withdraw Funds:</label>
               <input class="form-control" type="number" min="1" name="withdraw" id="withdraw">
               <br>
-              <button type="submit" id="withdraw-funds" class="btn btn-primary">Take your money!</button>
+              <button type="submit" id="withdraw-deposit" class="btn btn-primary">Take your money!</button>
             </form>
-            <form>
+            <form id="add-form">
               <br>
-              <label for="add"> Add Funds:</label>
-              <input class="form-control" type="number" min="1" name="add" id="add">
+              <label for="addfunds"> Add Funds:</label>
+              <input class="form-control" type="number" min="1" name="addfunds" id="addfunds">
               <br>
-              <button type="submit" id="add-funds" class="btn btn-primary">Give us money!</button>
+              <button type="submit" id="add-deposit" class="btn btn-primary">Give us money!</button>
             </form>
         </div>
     </div>
