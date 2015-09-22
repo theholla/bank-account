@@ -9,9 +9,10 @@
   </head>
   <body>
     <div class="container">
-
-      <h2>Open a Bank Account! Super Secure</h2>
-
+      <div class="row">
+        <div class="col-md-12">
+          <div id="headline"><h2>Open a Bank Account! Super Secure</h2>
+            <h3 class="minimumMessage">You must make a minimum initial deposit of $20.</h3></div>
             <div class="initial-form">
               <form id="new-bank-account">
                 <div class="form-group">
@@ -19,17 +20,36 @@
                   <input type="text" class="form-control" id="name">
                 </div>
                 <div class="form-group">
-                  <label for="deposit">Initial Deposit</label>
-                  <input type="text" class="form-control" id="deposit">
+                  <label for="deposit-form">Initial Deposit</label>
+                  <input type="number" min="0" class="form-control" id="deposit-form">
                 </div>
                 <button type="submit" class="btn btn-primary">Go</button>
             </form>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p id="welcome">
 
-        <p id="welcome">
-          
-        </p>
-
+          </p>
+        </div>
+          <div class="col-md-6" id="manage-account">
+            <h2>Manage Your Account</h2>
+            <form>
+              <label for="withdraw"> Withdraw Funds:</label>
+              <input class="form-control" type="number" min="1" name="withdraw" id="withdraw">
+              <br>
+              <button type="submit" id="withdraw-funds" class="btn btn-primary">Take your money!</button>
+            </form>
+            <form>
+              <br>
+              <label for="add"> Add Funds:</label>
+              <input class="form-control" type="number" min="1" name="add" id="add">
+              <br>
+              <button type="submit" id="add-funds" class="btn btn-primary">Give us money!</button>
+            </form>
+        </div>
     </div>
   </body>
 </html>
