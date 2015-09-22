@@ -35,14 +35,19 @@ var bankAccount;
     event.preventDefault();
     var amount = parseInt($("input#withdraw").val());
     bankAccount.withdraw(amount);
-    $("p#welcome").replaceWith("<br><br>You just withdrew $" + amount + "<br><br>" + "and you now have $" + bankAccount.deposit);
+    if (bankAccount.deposit < 0){
+      alert("YOU ARE OVERDRAWING!!!"); //add future feature to improve this
+    }
+    $("p#welcome").html("<br><br>You just withdrew $" + amount + "<br><br>" + "and you now have $" + bankAccount.deposit);
+    $("input#withdraw").val("");
   });
 
   $("form#add-form").submit(function(event) {
     event.preventDefault();
     var amount = parseInt($("input#addfunds").val());//this does not work if not parsed
     bankAccount.addfunds(amount);
-    $("p#welcome").replaceWith("<br><br>You just deposited $" + amount + "<br><br>" + "and you now have $" + bankAccount.deposit);
+    $("p#welcome").html("<br><br>You just deposited $" + amount + "<br><br>" + "and you now have $" + bankAccount.deposit);
+    $("input#addfunds").val("");
   });
 
 
