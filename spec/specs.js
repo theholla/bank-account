@@ -19,7 +19,7 @@ describe('withdraw', function() {
   });
 });
 
-describe('addfunds', function() {
+describe('adddeposit', function() {
   it("it adds money correctly to an account", function() {
     var testBankAccount = new BankAccount("Jake", 1000);
     testBankAccount.addfunds(5);
